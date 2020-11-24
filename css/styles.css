@@ -141,6 +141,10 @@ nav {
   padding: 3rem 0 1.5rem;
 }
 
+.greeting {
+  margin: 2rem 0;
+}
+
 .welcome-text {
   text-align: justify;
   padding: 1.2rem 5.5rem 0;
@@ -159,18 +163,28 @@ iframe {
 }
 
 
+/* Google Map */
+
+.location {
+  margin: 0 0 3.5rem;
+}
+
+
 /* Footer */
 
 footer {
   text-align: center;
   padding: 2rem 0 4rem;
   background-color: #202020;
-  color: #3F3F3F;
+  color: #BBBBBB;
+  margin-top: 4rem;
 }
 
 .footer-text {
   margin: 2.5rem 0 0;
 }
+
+.footer-text a {font-weight: bold;}
 
 .footer-heading {
   font-weight: bold;
@@ -179,7 +193,7 @@ footer {
 
 .footer-icons{
   padding: 0.5rem 0.7rem;
-  color: #3F3F3F;
+  color: #BBBBBB;
 }
 
 .footer-icons:hover{
@@ -197,7 +211,7 @@ footer {
 }
 
 .mis-vis p {
-  margin: 2rem 0 4.2rem;
+  margin: 4rem 0;
 }
 
 .mis-vis_head {
@@ -210,17 +224,20 @@ footer {
 
 .fee-structure {
   text-align: center;
-  padding: 2rem 0;
+  padding: 5.5rem 0;
 }
 
 table {
   text-align: justify;
   font-size: 1.2rem;
-  margin: 1.4rem auto;
+  margin: 2.5rem auto;
+  border-collapse: collapse;
 }
 
-td, th {
+.fee-structure td, th {
   padding: 0.5rem 1.2rem;
+  border-left: 2px solid grey;
+  border-right: 2px solid grey;
 }
 
 th {
@@ -229,7 +246,7 @@ th {
 
 .facilities {
   text-align: center;
-  padding: 4rem 8rem 6rem;
+  padding: 4rem 8rem;
 }
 
 .facilities p {
@@ -261,7 +278,13 @@ hr {
 /* Form */
 
 .reg-form {
+padding: 6rem 0;
+}
 
+.form-head {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 2rem 0;
 }
 
 select {
@@ -271,13 +294,77 @@ select {
   -ms-appearance: none;
   appearance: none;
   padding: 0.3rem 0.5rem;
-  border-radius: .2rem;;
+  border-radius: .2rem;
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  width: 22.7rem;
+  text-align-last: center;
+}
+
+.reg-form form input[type=text] {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  width: 22rem;
+  padding: 0.2rem;
+  text-align: center;
+}
+
+.reg-form form input[type=text]::placeholder{
+  text-align: center;
+}
+
+.reg-form form input[type=submit] {
+  position: relative;
+  font-family: Montserrat;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.5rem 2.5rem;
+  border: 1px solid grey;
+  border-radius: 0.8rem;
+  margin: 2rem 0;
+  cursor: pointer;
+}
+
+.reg-form form input[type=submit]:hover {
+  color: #fff;
+  font-weight: 600;
+  border: 2px solid white;
+  background: #007bff;
+  transition: background 0.5s, color 0.5s;
+  transition-delay: 0.25s;
+}
+
+.reg-form table {
+  margin: 2rem auto 1rem;
+}
+
+.reg-form td {
+  padding: 1rem 2rem;
+}
+
+.football-form {
+  background: #202020;
+  color: #fff;
+  border-radius: 0.8rem;
+  margin: 4rem auto;
+  width: 50rem;
+  padding: 2rem;
+}
+
+.reg-form form {
+  padding: 1rem;
+}
+
+.reg-form label {
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .thanks {
   text-align: center;
-  padding: 5rem 2rem 5rem;
+  padding: 5rem 2rem;
 }
+
 
 /* Timeline */
 
@@ -285,9 +372,78 @@ select {
   padding: 2rem 4rem;
 }
 
+.timeline table, td, th {
+  border: none!important;
+}
+
 .timeline td {
   padding: 2rem;
 }
+
+
+/* Staff */
+
+.staff {padding: 0 0 2rem;}
+.staff-head {margin: 1rem 0;}
+.staff p {margin: 1.5rem;}
+
+
+/* CSS Gallery */
+
+.row {
+  margin: 0 0 4rem;
+}
+
+.column {
+  float: left;
+  width: 32.5%;
+  padding: 5px;
+}
+
+.column img {width: 100%;}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.img-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+
+/* Parallax */
+
+.parallax {
+  background-image: url("../img/parallax.jpg");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* Disclaimer */
+
+.disclaimer {
+  color: #fff;
+  width: inherit;
+  background: #393e46;
+  border: 2px solid black;
+  overflow: hidden;
+  padding: 0.5rem;
+  margin: 2rem 0 0;
+}
+
+
+/* Overview */
+
+.overview {text-align: center;}
 
 
 /* Media Query Breakpoints */
@@ -310,16 +466,18 @@ select {
   /* Welcome Greeting */
   .welcome {padding: 8rem 0 5rem;}
   .greeting {font-size: 5rem;}
-  .welcome-text {margin: 2rem 0 0; padding: 2rem 4.5rem 0}
+  .welcome-text {margin: 2rem 0 0; padding: 2rem 4.5rem 0;}
+
+  /* Font-Size Declarations */
+  .mis-vis, .welcome-text, .fee-structure, .facilities, .reg-form {font-size: 2rem;}
 
   /* Youtube */
-  .youtube{padding: 1.5rem 0 10rem;}
   .iframe-container {position: relative; overflow: hidden; padding-top: 56.25%;}
   iframe {position: absolute; top: 0; left: 0; width: 95%; height: 95%; border: 0;margin-left: 2.5%;}
 
 
   /* Footer */
-  footer {padding: 6rem;}
+  footer {padding: 6rem 0; margin-top: 5rem;}
   footer .fa-2x {font-size: 3.5rem; padding: 0.8rem 2rem;}
   .footer-heading {font-size: 2.8rem; margin: 0 0 1.5rem}
   .footer-text {font-size: 1.5rem; margin: 1.5rem 0 0;}
@@ -333,17 +491,35 @@ select {
   .facilities {padding: 4rem 5rem 6rem;}
   .facilities i {padding: 2.5rem;}
 
-  /* Thanks Form */
+  /* Form */
+  .football-form label, .input[type=text], input[type=submit] {font-size: 2rem!important ;}
+  .form-head {font-size: 3.5rem;}
   .thanks {padding: 15rem 6rem;}
   .thanks .greeting {font-size: 2.5rem;}
 
   /* Timeline */
   .timeline table{padding: 0 2rem;}
-  .timeline-head {font-size: 3.5rem;}
+  .timeline th {padding: 0 3rem;}
+  .timeline td {padding: 2rem 3rem;}
+  .timeline-head {font-size: 4rem;}
+
+  /* Staff */
+  .staff {padding: 0;}
+  .staff-head {margin: 1rem 0;}
+  .staff p {margin: 2rem;}
+  .staff .welcome-text {padding: 0.5rem 4.5rem}
+
+  /* Parallax */
+  .parallax {background-attachment: scroll;}
+
+  /* CSS Gallery */
+  .column {width: 100%;}
+  .img-container{width: 100%; height: 500px;}
 }
 
-
-
 @media only screen and (min-width:992px) {
+
+  /* Font-Size Declarations */
   .welcome-text, .mis-vis, .fee-structure, .fee-structure table, .facilities {font-size: 1.5rem;}
+  .greeting {font-size: 4rem;}
 }
